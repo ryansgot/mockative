@@ -86,12 +86,12 @@ publishing {
     }
 }
 
-signing {
-    useInMemoryPgpKeys(
-        props.getProperty("signing.keyId"),
-        props.getProperty("signing.key"),
-        props.getProperty("signing.password"),
-    )
-
-    sign(publishing.publications)
-}
+//signing {
+//    useInMemoryPgpKeys(
+//        props.getProperty("signing.keyId"),
+//        props.getProperty("signing.key"),
+//        props.getProperty("signing.password"),
+//    )
+//
+//    sign(publishing.publications)
+//}
