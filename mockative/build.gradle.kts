@@ -26,11 +26,9 @@ afterEvaluate {
     println("after evaluate")
     kotlin.targets["metadata"].compilations.forEach { compilation ->
         compilation.compileKotlinTask.doFirst {
-            println("pre: ${compilation.compileDependencyFiles}")
             compilation.compileDependencyFiles = files(
                 compilation.compileDependencyFiles.filterNot { it.absolutePath.endsWith("klib/common/stdlib") }
             )
-            println("post: ${compilation.compileDependencyFiles}")
         }
     }
 }
